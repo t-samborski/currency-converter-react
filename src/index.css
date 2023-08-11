@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+#root {
+  font-family: 'Heebo', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+}

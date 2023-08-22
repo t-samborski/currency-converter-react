@@ -1,4 +1,4 @@
-import "./style.css";
+import {Forms, Fieldset, Legend, Header, Amount, Currency, Annotation, Button} from "./styled";
 import { useState } from "react";
 import { currencys } from "../currencys";
 import { Result } from "./Result"
@@ -14,18 +14,17 @@ export const Form = ({ result, calculateResult }) => {
     }
 
     return (
-        <form className="form" onSubmit={onSubmit}>
-            <fieldset className="form__fildset">
-                <legend className="form__legend">Przelicznik walut</legend>
+        <Forms onSubmit={onSubmit}>
+            <Fieldset>
+                <Legend>Przelicznik walut</Legend>
                <p><Clock/></p> 
                 <p>
                     <label>
-                        <span className="form__labelText">Wpisz kwotę w PLN*:</span>
-                        <input
+                        <Header>Wpisz kwotę w PLN*:</Header>
+                        <Amount
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
                             placeholder="Wpisz kwotę w PLN"
-                            className="form__label"
                             type="number"
                             required
                             min="1" />
@@ -33,9 +32,8 @@ export const Form = ({ result, calculateResult }) => {
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">Wybierz walutę:</span>
-                        <select
-                            className="form__label"
+                        <Header>Wybierz walutę:</Header>
+                        <Currency
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}>
                             {currencys.map((currency => (
@@ -45,16 +43,16 @@ export const Form = ({ result, calculateResult }) => {
                                 >
                                     {currency.name}</option>
                             )))}
-                        </select>
+                        </Currency>
                     </label>
                 </p>
-                <p><span className="form__annotation">Pola oznaczone * nie mogą być puste.</span>
+                <p><Annotation>Pola oznaczone * nie mogą być puste.</Annotation>
                 </p>
                 <p>
-                    <button className="form__button">Przelicz kurs</button>
+                    <Button>Przelicz kurs</Button>
                 </p>
                 <Result result={result} />
-            </fieldset>
-        </form>
+            </Fieldset>
+        </Forms>
     )
 }

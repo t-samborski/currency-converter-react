@@ -1,6 +1,6 @@
-import "./style.css";
+import {Score} from "./styled";
 export const Result = ({ result }) => (
-<p className = "result">
+<Score>
     {result !== undefined && (
         <>
         {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=&nbsp;
@@ -9,5 +9,5 @@ export const Result = ({ result }) => (
         </strong>
         </>
     )}
-</p>
+</Score>
 );

@@ -1,4 +1,4 @@
-import "./style.css";
+import {Timer} from "./styled";
 import { useState, useEffect } from "react";
 
 export const Clock = () => {
@@ -12,7 +12,7 @@ export const Clock = () => {
         };
     }, []);
     return (
-        <div className="clock">
+        <Timer>
             Dzisiaj jest {" "} {time.toLocaleString(undefined, {
                 weekday: "long",
                 hour: "2-digit",
@@ -21,7 +21,7 @@ export const Clock = () => {
                 day: "numeric",
                 month: "long"
             })}
-        </div>
+        </Timer>
     )
 };
 

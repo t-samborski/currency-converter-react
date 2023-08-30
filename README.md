@@ -11,7 +11,7 @@
 
 ## Other uses in the application
 ### The application also has the current time, which is displayed properly in all places of the world. It is updated every second, so the clock works in real time.
-![Zegar ](/image/clock.jpg)
+![Zegar](/image/cllock.jpg)
 
 ## Technologies used in the application.
 - HTML

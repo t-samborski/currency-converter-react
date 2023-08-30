@@ -1,4 +1,4 @@
-import {Forms, Fieldset, Legend, Header, Amount, Currency, Annotation, Button} from "./styled";
+import {Forms, Fieldset, Legend, Header, Input, Annotation, Button} from "./styled";
 import { useState } from "react";
 import { currencys } from "../currencys";
 import { Result } from "./Result"
@@ -21,7 +21,7 @@ export const Form = ({ result, calculateResult }) => {
                 <p>
                     <label>
                         <Header>Wpisz kwotę w PLN*:</Header>
-                        <Amount
+                        <Input
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
                             placeholder="Wpisz kwotę w PLN"
@@ -33,7 +33,8 @@ export const Form = ({ result, calculateResult }) => {
                 <p>
                     <label>
                         <Header>Wybierz walutę:</Header>
-                        <Currency
+                        <Input
+                            as="select"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}>
                             {currencys.map((currency => (
@@ -43,7 +44,7 @@ export const Form = ({ result, calculateResult }) => {
                                 >
                                     {currency.name}</option>
                             )))}
-                        </Currency>
+                        </Input>
                     </label>
                 </p>
                 <p><Annotation>Pola oznaczone * nie mogą być puste.</Annotation>

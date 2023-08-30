@@ -26,13 +26,7 @@ width: 210px;
 display: inline-block;
 `;
 
-export const Amount = styled.input`
-    border-radius: 5px;
-    width: 250px;
-    max-width: 250px;
-`;
-
-export const Currency = styled.select`
+export const Input = styled.input`
     border-radius: 5px;
     width: 250px;
     max-width: 250px;

@@ -1,4 +1,5 @@
 # The app works as a currency calculator.
+  ### Website address: [Adres](https://t-samborski.github.io/currency-converter-react/)
 ### The task of the application is to convert the exchange rate of the currency selected by the user. The user has the option of converting the exchange rate from PLN to 4 other available currencies.
 ![Widok aplikacji](/image/First.jpg)
 ## Mode of action
@@ -20,5 +21,5 @@
 - Normalize CSS
 - BEM convention
 - React.js
+## The application is created by styled-components. All sections of the website are in a separate directory, and the functions are in one hook. This makes the App.js file as transparent as possible.
 
-  ### Adres strony: [Adres](https://t-samborski.github.io/currency-converter-react/)
